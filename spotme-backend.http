@@ -1,0 +1,6 @@
+@spotme_backend_HostAddress = http://localhost:5099
+
+GET {{spotme_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
