@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/santiago/Documents/CodeStack/fullstack-spotme/spotme-backend/spotme-backend.csproj": {}
+    "C:\\Users\\mkhec\\Documents\\CodeStack 24-25\\Level 3\\Week 5\\fullstackbackend\\spotme-backend\\spotme-backend.csproj": {}
   },
   "projects": {
-    "/home/santiago/Documents/CodeStack/fullstack-spotme/spotme-backend/spotme-backend.csproj": {
+    "C:\\Users\\mkhec\\Documents\\CodeStack 24-25\\Level 3\\Week 5\\fullstackbackend\\spotme-backend\\spotme-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/santiago/Documents/CodeStack/fullstack-spotme/spotme-backend/spotme-backend.csproj",
+        "projectUniqueName": "C:\\Users\\mkhec\\Documents\\CodeStack 24-25\\Level 3\\Week 5\\fullstackbackend\\spotme-backend\\spotme-backend.csproj",
         "projectName": "spotme-backend",
-        "projectPath": "/home/santiago/Documents/CodeStack/fullstack-spotme/spotme-backend/spotme-backend.csproj",
-        "packagesPath": "/home/santiago/.nuget/packages/",
-        "outputPath": "/home/santiago/Documents/CodeStack/fullstack-spotme/spotme-backend/obj/",
+        "projectPath": "C:\\Users\\mkhec\\Documents\\CodeStack 24-25\\Level 3\\Week 5\\fullstackbackend\\spotme-backend\\spotme-backend.csproj",
+        "packagesPath": "C:\\Users\\mkhec\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mkhec\\Documents\\CodeStack 24-25\\Level 3\\Week 5\\fullstackbackend\\spotme-backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/santiago/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mkhec\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -78,12 +83,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.10, 8.0.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -92,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
