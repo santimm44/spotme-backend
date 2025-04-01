@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-using service;
-using spotme_backend.model;
-=======
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using spotme_backend.Context;
 using spotme_backend.Services;
->>>>>>> af925110411b5a749b6f677393ef693acc620ca0
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,7 +45,7 @@ builder.Services.AddAuthentication(options => {
 });
 
 //Custom added scopes
-builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<UserServices>();
 
 builder.Services.AddCors(options =>{
     options.AddPolicy("AllowAll",
@@ -72,17 +67,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-<<<<<<< HEAD
-//Call AllowAll
-app.UseCors("AllowAll");
-
-=======
 app.UseCors("AllowAll");
 
 app.UseAuthentication();
-
->>>>>>> af925110411b5a749b6f677393ef693acc620ca0
-app.UseAuthorization();
 
 app.MapControllers();
 
