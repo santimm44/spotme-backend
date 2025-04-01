@@ -1,28 +1,12 @@
-using System;
-using System.Collections.Generic;
-<<<<<<< HEAD
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-=======
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using spotme_backend.Models.DTOS;
 using spotme_backend.Services;
->>>>>>> af925110411b5a749b6f677393ef693acc620ca0
-
 namespace spotme_backend.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-<<<<<<< HEAD
-        
-=======
         private readonly UserServices _userServices;
 
         public UserController(UserServices userServices)
@@ -59,6 +43,5 @@ namespace spotme_backend.Controllers
 
             return BadRequest(new {Message = " User not found"});
         }
->>>>>>> af925110411b5a749b6f677393ef693acc620ca0
     }
 }
