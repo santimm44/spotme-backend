@@ -1,14 +1,53 @@
+<<<<<<< HEAD
 using service;
 using spotme_backend.model;
+=======
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using spotme_backend.Context;
+using spotme_backend.Services;
+>>>>>>> af925110411b5a749b6f677393ef693acc620ca0
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<UserServices>();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowAll", policy => {
+        policy.AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowAnyOrigin();
+    });
+});
+
+var secretKey = builder.Configuration["JWT:key"];
+var signingCredentials = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+
+builder.Services.AddAuthentication(options => {
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer( options => {
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        
+        ValidIssuer = "https://localhost:5000",
+        ValidAudience = "https://localhost:5000",
+        IssuerSigningKey = signingCredentials
+    };
+});
 
 //Custom added scopes
 builder.Services.AddScoped<UserService>();
@@ -25,7 +64,6 @@ builder.Services.AddCors(options =>{
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -34,9 +72,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+<<<<<<< HEAD
 //Call AllowAll
 app.UseCors("AllowAll");
 
+=======
+app.UseCors("AllowAll");
+
+app.UseAuthentication();
+
+>>>>>>> af925110411b5a749b6f677393ef693acc620ca0
 app.UseAuthorization();
 
 app.MapControllers();
