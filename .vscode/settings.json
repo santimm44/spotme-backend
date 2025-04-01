@@ -3,6 +3,7 @@
         "DTOS",
         "Hmac",
         "spotme",
-        "Swashbuckle"
+        "Swashbuckle",
+        "userlogin"
     ]
 }
