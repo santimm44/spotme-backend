@@ -38,8 +38,8 @@ builder.Services.AddAuthentication(options => {
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
         
-        ValidIssuer = "https://localhost:5000",
-        ValidAudience = "https://localhost:5000",
+        ValidIssuer = "https://spotme-dbaccesspoint-f6g8beadb2erdega.westus-01.azurewebsites.net/",
+        ValidAudience = "https://spotme-dbaccesspoint-f6g8beadb2erdega.westus-01.azurewebsites.net/",
         IssuerSigningKey = signingCredentials
     };
 });
