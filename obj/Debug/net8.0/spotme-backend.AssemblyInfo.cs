@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("spotme-backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+543f57ccc2d7f65be32745ac91ad37ac366f7eb8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5101b3ca5b94b416e9edae6169d2c83e49d231e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("spotme-backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("spotme-backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
