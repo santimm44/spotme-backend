@@ -4,5 +4,6 @@ namespace spotme_backend.Models.DTOS
     {
         public int Id { get; set;}
         public string? Username {get; set;}
+
     }
 }
