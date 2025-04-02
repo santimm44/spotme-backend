@@ -83,8 +83,8 @@ namespace spotme_backend.Services
             var signingCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
 
             var tokenOptions = new JwtSecurityToken(
-                issuer: "https://localhost:5000",
-                audience: "https://localhost:5000",
+                issuer: "https://spotme-dbaccesspoint-f6g8beadb2erdega.westus-01.azurewebsites.net/",
+                audience: "https://spotme-dbaccesspoint-f6g8beadb2erdega.westus-01.azurewebsites.net/",
                 claims: claims,
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: signingCredentials
